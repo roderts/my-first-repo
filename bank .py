@@ -1,9 +1,13 @@
 import datetime
 
-class transaction:
-    def __init__(self, deposit: float = 0, withdraw: float = 0):
-            self.deposit = deposit
-            self.withdraw = withdraw
+#UZDEVUMS: izveido klasi Transaction.
+
+class Transaction:
+    def __init__(self, amount: float = 0, note: str = ''):
+        self.amount = amount
+        self.note = note
+        self.timestamp = datetime.datetime.now()
+
 
 class Account:
     auto_account_number = 1234567890
@@ -14,10 +18,10 @@ class Account:
         self.currency = currency
         self.initial_balance = initial_balance
 
-    def addTransaction():
+    def AddTransactioon():
         pass
-
-
+        
+        
 class Client:
     def __init__(self, name: str):
         self.name = name
@@ -28,7 +32,8 @@ class Client:
         self.accounts.append(account)
 
     def introduce(self):
-        print(f'Hi, my name is {self.name} and i have {len(self.accounts)} accounts in your bank')
+        print(f"Hi, my name is {self.name}, I have {len(self.accounts)} accounts in your bank.")
+
 
 clients = []
 clients.append(Client('Anna'))
